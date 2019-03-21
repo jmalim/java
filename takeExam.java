@@ -1,11 +1,3 @@
-/**
- * @(#)takeExam.java
- *
- *
- * @author 
- * @version 1.00 2019/3/20
- */
- 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -254,11 +246,16 @@ public class takeExam extends JFrame implements ActionListener {
     }
      public void actionPerformed (ActionEvent e){
      	if (e.getSource() == bTake){
-     		f2.setVisible(true);
-     		setVisible(false);
+     			f2.setVisible(true);	
+				setVisible(false);
+  		
      		}
      	if (e.getSource() == bOk){
-     		f3.setVisible(true);
+     		if( !txtSname.getText().equals( "" ) ){
+     			f3.setVisible(true);
+			}else{
+				f3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			}
 
      	}
      	if (e.getSource() == bFl){
